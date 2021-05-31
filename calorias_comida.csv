@@ -1,0 +1,408 @@
+id_items;Nombre;caloria Porcion;categoria
+4;Ensalada de col con queso;150;Verduras
+5;Ensalada de tomate y pimiento asado;205;Verduras
+12;Ensalada de Lechuga Romana;67;Verduras
+25;Ensalada con tomates cherry;180;Verduras
+27;Ensalada de brócoli con frutos secos;290;Verduras
+34;Ensalada de lechuga con pollo y queso;460;Combinados
+47;Ensalada de berros con tomate;70;Verduras
+51;Ensalada de arroz con judias verdes;140;carbohidratos
+80;Ensalada de manzana verde con apio;100;Verduras
+92;Ensalada césar con pollo empanado;720;Combinados
+101;Acelgas con Patatas y Pimentón;63;Verduras
+106;Ensalada de cuscús y aguacate;320;Verduras
+109;Ensalada de Atún con coliflor;206;Verduras
+120;Ensalada de berenjenas árabe;145;Verduras
+133;Ensalada con trigo americano y atún;540;Combinados
+138;Ensalada de Almendras y pollo;363;Verduras
+140;Ensalada de trigo con verduras;203;Verduras
+144;Ensalada de remolacha y patatas;168;Verduras
+152;Empedrat de garbanzos;358;Verduras
+165;Ensalada de Pepino;102;Verduras
+167;Ensalada de lentejas y quinoa vegana;375;Combinados
+169;Judias verdes con patatas y huevos;200;Verduras
+173;Ensalada de pollo y aguacate;210;Verduras
+174;Ensaladilla de remolacha;200;Verduras
+177;Ensalada de repollo y zanahoria;180;Verduras
+180;Ensalada de maíz y aguacate;260;Verduras
+203;Ensalada de pasta con pollo;396;Combinados
+213;Ensalada de rábanos;80;Verduras
+215;Ensalada de calabaza;210;Verduras
+225;Ensalada con jamón y queso;260;Combinados
+227;Ensalada de garbanzos, aguacate y tomate;270;Verduras
+228;Ensalada de Espinacas y Champiñones;66;Verduras
+239;Ensaladilla rusa para el verano;270;Verduras
+273;Ensalada de rúcula y queso parmesano;120;Verduras
+294;Ensalada de Pasta con Macarrones;435;Combinados
+324;Conejo a la plancha;200;proteina
+326;Secreto Ibérico al Horno con Puré;322;proteina
+329;Conejo al ajillo con salsa de vino blanco;180;proteina
+332;Chivito uruguayo;700;Combinados
+333;Conejo a la parrilla;268;proteina
+338;Albóndigas de carne de res;210;proteina
+343;Churrasco a la brasa;382;proteina
+350;Estofado de cerdo con manzanas;200;proteina
+355;Secreto de cerdo a la plancha;410;proteina
+357;Estofado de pollo con patatas;700;Combinados
+373;Chorizos al vino;410;proteina
+378;Estofado de cerdo con champiñones;400;Combinados
+381;Secreto en salsa de naranja;410;proteina
+382;Estofado de cordero con setas;330;Combinados
+384;Estofado de cordero al horno;296;Combinados
+386;Chuletas de cordero asadas;212;proteina
+397;Chuletas de cerdo a la plancha;250;proteina
+398;Estofado de ternera con setas;474;proteina
+400;Chuletas de cerdo a la cerveza;380;proteina
+404;Estofado de ternera en salsa de tomate;540;Combinados
+405;Chuletas a la BBQ a la sartén;288;proteina
+414;Cordero asado con patatas;290;proteina
+419;Chuletas de cerdo con salsa mostaza;453;proteina
+436;Cordero con Salsa Teriyaki;288;proteina
+452;Ternera en salsa con tomate;390;proteina
+455;Muslos de pollo asados al limón;183;proteina
+461;Ternera a la campesina;280;Combinados
+463;Muslitos de pollo en salsa;380;proteina
+470;Redondo de Ternera con Setas;146;proteina
+473;Ternera a la jardinera;580;Combinados
+477;Solomillo de ternera con cebolla caramelizada;120;proteina
+478;Pollo al roquefort;380;proteina
+482;Pollo en salsa de soja y miel;190;proteina
+486;Alambre de res con champiñones;250;proteina
+496;Croquetas de ternera guisada;250;proteina
+497;Cabrito a la Plancha;242;proteina
+503;Solomillo de cerdo en salsa de queso;320;proteina
+515;Escalope a la milanesa;550;proteina
+517;Mollejas al ajillo;137;proteina
+518;Hígado encebollado;404;proteina
+526;Guiso de pollo y setas;580;Combinados
+527;Mollejas de ternera a la brasa;250;proteina
+530;Salchichas en salsa de tomate;180;proteina
+531;Salchichas Encebolladas;288;Combinados
+540;Ternera asada al horno;131;proteina
+542;Carne asada con romero;280;proteina
+548;Mollejas a la plancha;299;proteina
+554;Matambre arrollado;400;proteina
+555;Solomillo en Salsa de Trufa;315;proteina
+557;Lomo de cerdo con pimentón;125;proteina
+559;Lomo de cerdo en salsa de manzana;310;proteina
+565;Pechugas de pollo a la plancha;160;proteina
+575;Hamburguesas Caseras con Queso Roquefort;592;proteina
+581;Cabrito en salsa de almendras;315;proteina
+584;Pechugas de pollo asadas;164;proteina
+589;Pechugas de pollo con nata;270;proteina
+591;Pollo empanado con queso;242;proteina
+596;Estofado de Ternera en Olla Express;319;proteina
+608;Estofado de ternera al vino tinto;540;Combinados
+613;Estofado de Pollo con Verduras;558;Combinados
+615;Estofado de Ternera con Verduras;558;Combinados
+616;Estofado de Conejo a la Cazadora;311;Combinados
+618;Estofado de ternera con patatas;636;Combinados
+633;Guiso de ternera con garbanzos;675;Combinados
+636;Garbanzos con Tomate y Cebolla;234;carbohidratos
+637;Garbanzos con chorizo;250;carbohidratos
+650;Ternera asada con patatas nuevas;450;Combinados
+663;Lentejas con chorizo;776;Combinados
+668;Salteado de setas;160;proteina
+670;Acelgas con garbanzos;298;Verduras
+675;Patatas a la Riojana;350;Verduras
+682;Ragout de Ternera;420;proteina
+688;Alubias con Verduras;243;carbohidratos
+696;Potaje de lentejas;980;carbohidratos
+701;Lentejas con Verduras;168;carbohidratos
+703;Puchero casero;305;Verduras
+727;Secreto de cerdo al horno con queso;458;proteina
+729;Conejo al Horno con Patatas;624;Combinados
+733;Coles de bruselas con bechamel al horno;280;Verduras
+737;Coles de bruselas al horno con miel;180;Verduras
+738;Secreto al horno;420;proteina
+741;Aguacate al horno con huevo;140;Verduras
+749;Canelones de berenjena;113;Verduras
+761;Costillas con salsa barbacoa;350;proteina
+764;Cabrito al horno;290;proteina
+765;Pollo rústico al horno;318;proteina
+769;Pollo con verduras asadas;560;Combinados
+774;Setas al horno;370;proteina
+783;Quiché de puerros y queso de cabra;320;Combinados
+785;Matambre arrollado al horno;241;proteina
+789;Pastel de champiñones;406;Combinados
+790;Pastel de acelga y patatas;250;Verduras
+791;Pastel de Puerros y Champiñones;156;Verduras
+802;Butifarra al horno con patatas;800;Combinados
+806;Pollo Empanado al Horno;274;proteina
+828;Canelones de choclo;299;Verduras
+834;Canelones de verduras;380;Verduras
+839;Lomo de cerdo al horno;250;proteina
+851;Costillas de cabrito al horno;160;proteina
+861;Quiche de Calabacín;450;Verduras
+862;Quiche de verduras;130;Verduras
+863;Redondo de ternera al horno;490;proteina
+864;Solomillo a la mostaza;450;proteina
+872;Solomillo de cerdo al horno;158;proteina
+873;Pierna de cordero al horno;278;proteina
+881;Verduras al horno;45;Verduras
+889;Calabacines rellenos;275;Verduras
+890;Empanada de atún;414;Combinados
+891;Patatas al Horno con Sal;160;Verduras
+892;Quiche sin Huevo;410;Verduras
+903;Pastel de Berenjenas;450;Verduras
+905;Pastel de Carne;310;Combinados
+918;Pastel de Patata;300;Verduras
+920;Solomillo en salsa roquefort;340;proteina
+924;Calabaza al horno;60;Verduras
+930;Calamares a la andaluza;200;Verduras
+938;Quinoa con verduras;396;Combinados
+941;Quinoa con queso;525;carbohidratos
+958;Hamburguesa de Quinoa;125;carbohidratos
+959;Rissoto de Quinoa;300;carbohidratos
+998;Sopa de avena y verduras;296;Combinados
+1000;Puré de coliflor con queso;108;Verduras
+1015;Puré de Apio;155;Verduras
+1025;Puré de espinacas;280;Verduras
+1056;Sopa de verduras light;150;Verduras
+1080;Sopa de alubias con verduras;450;Verduras
+1094;Fajitas de verduras con arroz;350;Combinados
+1097;Chorizo con papas;600;Combinados
+1099;Sushi sin alga nori;548;Combinados
+1101;Tofu con salsa picante;250;proteina
+1102;Fajitas de pollo y carne picada;300;Combinados
+1103;Tostada de jamón serrano y tomate;150;Verduras
+1104;Tostada con champiñones y queso;204;Verduras
+1105;Espinacas con garbanzos en thermomix;250;Verduras
+1106;Puré de patata con zanahoria;130;Verduras
+1109;Wrap de lechuga con atún;360;Combinados
+1114;Wrap vegano;430;Verduras
+1115;Puré de patata con atún y huevo;230;Verduras
+1117;Raviolis de Calabacín con Queso;86;Verduras
+1119;Wrap vegetariano;302;Verduras
+1125;Quesadillas de champiñones con queso;130;proteina
+1126;Sushi con salmón ahumado;510;Combinados
+1128;Sushi california roll;510;Combinados
+1134;Canelones de berenjena rellenos de carne;420;Combinados
+1136;Muslos de Pollo Frito;318;proteina
+1138;Croquetas de boniato y setas;100;Verduras
+1140;Fajitas mexicanas;500;Combinados
+1144;Fideos chinos con pollo;500;Combinados
+1148;Chop suey en olla exprés;390;Combinados
+1154;Hamburguesa completa casera con patatas;760;Combinados
+1160;Quinoa con calabacín;280;Verduras
+1165;Quesadilla de jamón y queso;200;Verduras
+1177;Brochetas de pollo a la barbacoa;250;proteina
+1180;Patatas al vapor;75;Verduras
+1181;Tortilla de acelgas;288;Verduras
+1186;Hamburguesa vegetariana de remolacha;305;Verduras
+1187;Sushi de atún;279;proteina
+1188;Wok de pollo;340;Combinados
+1189;Tacos de pollo a la mexicana;530;Combinados
+1190;Rollitos de primavera;305;Verduras
+1192;Tortilla de patata con cebolla;180;Verduras
+1194;Sandwich de salmón ahumado;288;carbohidratos
+1199;Wrap de pollo fácil;500;Combinados
+1200;Sándwich de pollo;283;carbohidratos
+1201;Sándwich de atún;180;carbohidratos
+1202;Empanadas argentinas;223;carbohidratos
+1205;Hamburguesa de tofu;175;Verduras
+1206;Hamburguesa con huevo frito;400;Combinados
+1217;Tomate al Horno con Queso;73;Verduras
+1223;Croqueta vegana de setas;170;proteina
+1229;Lentejas con arroz;180;Verduras
+1237;Hamburguesa casera y fácil;470;Combinados
+1240;Acelgas con jamón;115;Verduras
+1242;Carne en salsa fácil;407;Verduras
+1247;Tortilla de berenjena;277;Verduras
+1256;Puré de calabaza;102;Verduras
+1267;Crepes salados;110;Verduras
+1268;Sándwich de pernil;385;Verduras
+1269;Sándwich de queso y tocino;250;Verduras
+1281;Sopa de legumbres casera;49;Verduras
+1282;Ensalada agridulce de garbanzos;250;Verduras
+1286;Menestra de fréjol;300;Verduras
+1306;Hamburguesas de lentejas;200;Verduras
+1309;Quinoa con champiñones;400;Verduras
+1316;Albóndigas de lentejas;89;Verduras
+1317;Ensalada de alubias blancas;155;Verduras
+1360;Salmón al horno con verduras;500;Combinados
+1420;Merluza con espárragos al horno;340;Combinados
+1553;Salmón en salsa de queso;655;proteina
+1580;Merluza en salsa de champiñones;250;proteina
+1592;Merluza rebozada;390;proteina
+1594;Mero a la parrilla;145;proteina
+1623;Dorada a la plancha;110;Verduras
+1652;Salmón a la plancha;499;proteina
+1710;Pizza pepperoni;300;carbohidratos
+1712;Fusilli con atún y verduras;328;carbohidratos
+1715;Noodles con Pollo;218;carbohidratos
+1722;Fusilli al Vino;247;carbohidratos
+1725;Noodles con ternera;320;carbohidratos
+1726;Fusilli con Salsa de Setas;275;carbohidratos
+1730;Pizza fugazzeta;270;carbohidratos
+1731;Fusilli carbonara;360;carbohidratos
+1732;Ensalada de pasta con remolacha;170;carbohidratos
+1734;Pizza Tropical;280;carbohidratos
+1737;Raviolis de setas con salsa de tomate;288;carbohidratos
+1738;Pizza de atún;208;carbohidratos
+1739;Ensalada de pasta integral con verduras;230;carbohidratos
+1740;Ravioles cuatro quesos;319;carbohidratos
+1741;Pizza barbacoa vegana;228;carbohidratos
+1742;Pizza Fugazza con Queso;180;carbohidratos
+1745;Pizza vegetariana con queso;240;carbohidratos
+1748;Pizza de Pollo y Bacon;321;carbohidratos
+1749;Pizza Napolitana tradicional;956;Combinados
+1752;Raviolis con salsa de nueces;649;carbohidratos
+1755;Raviolis rellenos de carne;340;carbohidratos
+1756;Raviolis de calabaza;270;carbohidratos
+1758;Raviolis con nata;200;carbohidratos
+1759;Raviolis con salsa bechamel;210;carbohidratos
+1764;Pizza de calabacín y bacon;420;carbohidratos
+1765;Pizza de espinacas y queso de cabra;250;carbohidratos
+1767;Pizza con piña hawaiana;315;carbohidratos
+1776;Canelones Rellenos con Ricotta y Espinaca;151;carbohidratos
+1777;Canelones Vegetarianos de Zanahoria;130;carbohidratos
+1783;Espaguetis de calabacín con salsa de tomate;100;carbohidratos
+1784;Canelones de atún y huevo duro;380;carbohidratos
+1787;Espaguetis con albóndigas;215;carbohidratos
+1791;Espaguetis con pollo y curry;480;carbohidratos
+1792;Espagueti con pollo y champiñones;345;carbohidratos
+1796;Fetuccini al pesto;330;carbohidratos
+1798;Macarrones al Limón;301;carbohidratos
+1800;Pizza queso, champiñones y jamón york;250;carbohidratos
+1803;Espaguetis con salchichas y tomate;554;carbohidratos
+1805;Espaguetis Integrales con Salsa de Tomate Fresco;296;carbohidratos
+1806;Espaguetis Gratinados con Bechamel;177;carbohidratos
+1808;Espaguetis integrales con verduras;125;carbohidratos
+1810;Tallarines de pollo;359;carbohidratos
+1811;Macarrones con Pollo al Curry;760;Combinados
+1812;Canelones sin bechamel;298;carbohidratos
+1814;Tortellini con Salsa de Queso;354;carbohidratos
+1815;Raviolis rellenos de espinacas;214;carbohidratos
+1816;Macarrones con zanahoria;290;carbohidratos
+1819;Tortellini con Salsa de Tomate;235;carbohidratos
+1820;Lasaña de espinacas y atún;250;carbohidratos
+1823;Lasaña de Acelgas;240;carbohidratos
+1824;Espaguetis a los 3 Quesos;131;carbohidratos
+1825;Espagueti boloñesa;359;carbohidratos
+1826;Macarrones de atún y mayonesa;733;Combinados
+1829;Espaguetis al queso azul;220;carbohidratos
+1834;Espaguetis al horno;350;carbohidratos
+1837;Espaguetis con coliflor;300;carbohidratos
+1838;Ñoquis con espinacas;196;carbohidratos
+1842;Espaguetis con trufa;325;carbohidratos
+1844;Ñoquis a la romana;650;carbohidratos
+1847;Canelones con Verduras;396;Combinados
+1854;Pizza de Pollo y Pesto;197;carbohidratos
+1857;Pizza con base de remolacha;315;carbohidratos
+1861;Pizza de polenta sin gluten y vegana;358;carbohidratos
+1865;macarrones con champiñones y queso;350;carbohidratos
+1866;Raviolis de Queso;173;carbohidratos
+1874;Macarrones con brócoli y queso;350;carbohidratos
+1875;Ñoquis a la carbonara;420;carbohidratos
+1878;Canelones de setas;354;carbohidratos
+1879;Pizza de champiñones;350;carbohidratos
+1885;Fetuccini a la napolitana;400;carbohidratos
+1886;Ñoquis con champiñones;220;carbohidratos
+1888;Raviolis rellenos de setas;280;carbohidratos
+1890;Lasaña Boloñesa;470;Combinados
+1892;Canelones de carne picada y Bechamel;200;carbohidratos
+1893;Espaguetis a la Carbonara tradicional;195;carbohidratos
+1895;Tallarines a la carbonara;359;carbohidratos
+1897;Macarrones con mantequilla;166;carbohidratos
+1898;Espaguetis con Nata y Bacon;485;carbohidratos
+1901;Espaguetis con Champiñones;378;carbohidratos
+1902;Calzone tradicional;260;carbohidratos
+1906;Macarrones con bechamel;165;carbohidratos
+1907;Lasaña de setas;472;Combinados
+1912;Pasta fresca casera;180;carbohidratos
+1917;Macarrones a la carbonara;585;Combinados
+1919;Canelones de espinacas;150;carbohidratos
+1922;Salsa de ñoquis;460;carbohidratos
+1923;Macarrones con Carne Picada;358;carbohidratos
+1928;Macarrones con queso sin horno;348;carbohidratos
+1940;Risotto de Queso Azul;360;carbohidratos
+1948;Arroz frito con curry;288;carbohidratos
+1954;Arroz con pollo y curry;420;Combinados
+1955;Arroz cremoso con calabacín;290;carbohidratos
+1957;Risotto de setas y bacon;490;carbohidratos
+1958;Arroz con Chorizo y Huevo;342;carbohidratos
+1960;Arroz frito con ternera;447;carbohidratos
+1962;Arroz con manzana;55;carbohidratos
+1966;Risotto de setas y pollo;370;carbohidratos
+1968;Risotto de pera y queso;300;carbohidratos
+1970;Fideos de arroz fritos;300;carbohidratos
+1975;Risotto de azafrán;330;carbohidratos
+1979;Risotto de calabaza y queso;320;carbohidratos
+1980;Arroz con espinacas;225;carbohidratos
+1992;Arroz blanco con verduras;465;carbohidratos
+1997;Arroz amarillo con pollo;276;carbohidratos
+2000;Arroz con atún fácil;240;carbohidratos
+2002;Arroz con Salchichas;180;carbohidratos
+2009;Arroz Tres Delicias;200;carbohidratos
+2016;Bolitas de arroz rellenas de queso;655;carbohidratos
+2019;Wok de quinoa y verduras;210;carbohidratos
+2029;Risotto de espinacas;355;carbohidratos
+2033;Risotto de Salmón;343;carbohidratos
+2041;Arroz con acelgas;250;carbohidratos
+2043;Arroz integral con verduras;84;carbohidratos
+2057;Arroz frito con pollo;310;carbohidratos
+2081;Arroz basmati con verduras;320;carbohidratos
+2086;Arroz con alcachofas;115;carbohidratos
+2090;Arroz con Espárragos;275;carbohidratos
+2098;Arroz con Brócoli;330;carbohidratos
+2102;Arroz con chorizo;300;carbohidratos
+2119;Acelgas con patatas al vapor;190;Verduras
+2126;Coles de Bruselas salteadas con jamón;250;Verduras
+2127;Acelgas Salteadas con Champiñones;73;Verduras
+2135;Puré de berenjena;100;Verduras
+2139;Coles de bruselas con bacon;270;Verduras
+2140;Tortilla de acelgas vegana;118;Verduras
+2156;Puré de Arvejas o Guisantes;102;Verduras
+2163;Acelgas salteadas con patata;150;Verduras
+2164;Puré de patata sin lactosa;112;Verduras
+2165;Puré de Papas al Horno;103;Verduras
+2166;Pepinos al horno para guarnición;101;Verduras
+2167;Puerros al horno con jamón y huevo;150;Verduras
+2169;Puré de verduras light;120;Verduras
+2192;Canelones de calabacín fríos;270;Verduras
+2196;Verduras salteadas con soja;160;Verduras
+2211;Croquetas de calabacín y queso;200;Verduras
+2221;Espinacas al Horno;229;Verduras
+2222;Espárragos blancos al vapor;112;Verduras
+2242;Coliflor salteada al curry;100;Verduras
+2249;Puré de acelgas y patatas;192;Verduras
+2260;Quiché de coliflor;180;Verduras
+2263;Verduras a las finas hierbas;150;Verduras
+2275;Quiche de espinacas;350;Verduras
+2285;Berenjenas salteadas;195;Verduras
+2289;Berenjenas con queso al horno;250;Verduras
+2302;Tortilla de boniato;235;Verduras
+2306;Calabacín al vapor;70;Verduras
+2320;Calabacines al horno con parmesano;375;Verduras
+2324;Croquetas de brócoli;96;Verduras
+2328;Revuelto de espárragos;263;Verduras
+2334;Salteado de espárragos verdes;170;Verduras
+2362;Revuelto de acelgas;302;Verduras
+2374;Calzone vegetariana;231;Verduras
+2385;Espárragos gratinados;250;Verduras
+2393;Guisantes con huevo;80;Verduras
+2394;Puré de boniato;153;Verduras
+2402;Tortilla de brócoli y coliflor;389;Verduras
+2404;Tortilla de calabacín con queso;150;Verduras
+2406;Tortilla de aguacate y cebolleta;275;Verduras
+2408;Tortilla de brócoli y queso;160;Verduras
+2412;Tortilla con setas;90;proteina
+2414;Tortilla de Patatas con Cebolla y Puerro;127;Verduras
+2419;Tortilla de patatas con espinacas;140;Verduras
+2434;Tortilla de rúcula;500;Verduras
+2445;Revuelto de Pimientos;134;Verduras
+2446;Revuelto de espárragos y champiñones;225;Verduras
+2447;Revuelto de patatas con jamón ibérico;450;Verduras
+2448;Revuelto de espinacas;118;Verduras
+2450;Huevos Revueltos con Cebolla;312;Combinados
+2452;Revuelto de puerros;106;Verduras
+2454;Tortilla de Pimientos y Cebolla;165;Verduras
+2456;Revuelto de berenjena;230;Verduras
+2478;Huevos revueltos con champiñones;91;proteina
+2483;Huevos revueltos con tomate;230;Verduras
+2498;Tortilla francesa con jamón;190;proteina
+2506;Tortilla de patatas con microondas;270;Verduras
+2509;Tortilla de Espárragos Verdes;246;Verduras
+2515;Revuelto de Verduras;340;Verduras
+2517;Tortilla francesa;154;proteina
