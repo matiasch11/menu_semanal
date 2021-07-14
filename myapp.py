@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import streamlit as st 
 import numpy as np
@@ -10,32 +8,31 @@ import pandas as pd
 import io
 import os
 import random
+import plotly.graph_objects as go
+from PIL import Image
+import base64
+from fpdf import FPDF
 
-# In[5]:
 
 
-st.title('Menu Semanal según requeirmiento calórico')
+
+st.title('Genera un MENU de tu gusto y según requerimiento calórico')
 
 
-# In[ ]:
+image = Image.open('Metodo-plato.png')
 
+st.image(image, use_column_width=False)
 
 st.write("""
-# El mecanismo Basal
-Para hombres:
-TMB = (10 x peso en kg) + (6,25 × altura en cm) – (5 × edad en años) + 5
-
-Para mujeres:
-TMB = (10 x peso en kg) + (6,25 × altura en cm) – (5 × edad en años) – 161
+Un plato equilibrado incluye verduras, carbohidratos y proteinas. 
+Te plantearemos un menu equilibrado que satisfaga tus gustos y tus necesidades. 
 
 """)
 
 
-# In[7]:
-
-peso = st.sidebar.text_area('Ingrese su peso en Kg')
-altura = st.sidebar.text_area('Ingrese su altura en cm', height=7)
-edad = st.sidebar.text_area('Ingrese su edad en años', height=7)
+peso = st.sidebar.selectbox('Ingrese su peso en Kg', list(range(40,140)))
+altura = st.sidebar.selectbox('Ingrese su altura en cm', list(range(140,200))) 
+edad = st.sidebar.selectbox('¿Cuántos años tiene?', list(range(16,80)))
 sexo= st.sidebar.radio('Indique su  sexo', ('Hombre', 'Mujer'))
 if sexo == 'Hombre':
     sexo= 'H'
@@ -56,45 +53,29 @@ def calculo_tmb(peso, altura, edad, sexo):
     return TMB
 
                 
-# In[9]:
-actividad = st.sidebar.text_area('Cuanta actividad fisica realizas: 1-Sedentario, 2-actividad ligera, 3-actividad moderada, 4-actividad intensa, 5-actividad muy intensa', height=7)
+actividad = st.sidebar.slider('Cuanta actividad fisica realizas: 1-Sedentario, 2-actividad ligera, 3-actividad moderada, 4-actividad intensa, 5-actividad muy intensa', 1, 5)
+
 
 def calculo_calorias(tmb, actividad):
     global calorias_diarias
-    actividad = actividad
-    if actividad == '1':
+    actividad = (actividad)
+    if actividad == 1:
         calorias_diarias = tmb * 1.2
-    elif actividad == '2':
+    elif actividad == 2:
         calorias_diarias = tmb * 1.375
-    elif actividad == '3':
+    elif actividad == 3:
         calorias_diarias = tmb * 1.55
-    elif actividad == '4':
+    elif actividad == 4:
         calorias_diarias = tmb * 1.725
-    elif actividad == '5':
+    elif actividad == 5:
         calorias_diarias = tmb * 1.9
     else:
         print('error')
     return calorias_diarias      
     
     
-dias_menu = st.sidebar.text_area('Para cuantos días desea el menú', height=7)
+dias_menu = st.sidebar.selectbox('¿Para cuántos días desea el menú?', [1,2,3,4,5,6,7])
 
-# In[10]:
-
-
-# In[11]:
-
-
-
-
-
-# In[12]:
-
-
-
-
-
-# In[21]:
 
 
 @st.cache
@@ -106,9 +87,18 @@ def load_data():
     data = pd.read_csv(datafile, sep=';', header =0, names=columns, encoding='latin-1', index_col = 0)
     return data
 
-data = load_data()
+def load_data_link():
+    data_root = "/home/dsc/TFM/repositorio/"
+    columns = ['id_link', 'name_food', 'caloria porcion','link']
+    datafile = os.path.join(data_root, "df_food_calories_link.csv")
+    data_link = pd.read_csv(datafile, sep=',', header =0, names=columns, encoding='latin-1', index_col = 0)
+    return data_link
 
-#@st.cache
+data = load_data()
+data_link = load_data_link()
+
+data_total = data.merge(data_link, left_index=True, right_index=True)
+
 
 def load_data_encuesta():
     data_root= "/home/dsc/TFM/repositorio/"
@@ -139,9 +129,37 @@ data_encuesta['items_id'] = column_items_id
 # CONSULTAR al usuario
 
   
-st.title('Cuanto te gustán las siguientes comidas')
+st.title('Danos tu opnión sobre uno de los siguientes grupos de comidas')
 
-items_id_user=[1, 2, 5, 7, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 95] 
+combinacion = st.selectbox('elige un grupo', ['Grupo 1','Grupo 2','Grupo 3','Grupo 4','Grupo 5','Grupo 6','Grupo 7','Grupo 8','Grupo 9'])
+
+if combinacion == 'Grupo 1':
+    combinacion = 1
+elif combinacion == 'Grupo 2':
+    combinacion = 2
+elif combinacion == 'Grupo 3':
+    combinacion = 3
+elif combinacion == 'Grupo 4':
+    combinacion = 4
+elif combinacion == 'Grupo 5':
+    combinacion = 5
+elif combinacion == 'Grupo 6':
+    combinacion = 6
+elif combinacion == 'Grupo 7':
+    combinacion = 7
+elif combinacion == 'Grupo 8':
+    combinacion = 8
+elif combinacion == 'Grupo 9':
+    combinacion = 9
+
+
+st.write('Siendo 0 No me gusta y 4 Me encanta')
+
+items_id_user=[]
+for c in range(20):
+    items_id_user.append(combinacion)
+    combinacion += 20
+
 
             
 food_user = []
@@ -149,26 +167,26 @@ for l in items_id_user:
     food_user.append(food_id[l])
 
 
-rat_x0 = st.text_area(food_user[0], height=10)
-rat_x1 = st.text_area(food_user[1], height=10)
-rat_x2 = st.text_area(food_user[2], height=10)
-rat_x3 = st.text_area(food_user[3], height=10)
-rat_x4 = st.text_area(food_user[4], height=10)
-rat_x5 = st.text_area(food_user[5], height=10)
-rat_x6 = st.text_area(food_user[6], height=10)
-rat_x7 = st.text_area(food_user[7], height=10)
-rat_x8 = st.text_area(food_user[8], height=10)
-rat_x9 = st.text_area(food_user[9], height=10)
-rat_x10 = st.text_area(food_user[10], height=10)
-rat_x11 = st.text_area(food_user[11], height=10)
-rat_x12 = st.text_area(food_user[12], height=10)
-rat_x13 = st.text_area(food_user[13], height=10)
-rat_x14 = st.text_area(food_user[14], height=10)
-rat_x15 = st.text_area(food_user[15], height=10)
-rat_x16 = st.text_area(food_user[16], height=10)
-rat_x17 = st.text_area(food_user[17], height=10)
-rat_x18 = st.text_area(food_user[18], height=10)
-rat_x19 = st.text_area(food_user[19], height=10)
+rat_x0 = st.slider(food_user[0], 0,4)
+rat_x1 = st.slider(food_user[1], 0,4)
+rat_x2 = st.slider(food_user[2], 0,4)
+rat_x3 = st.slider(food_user[3], 0,4)
+rat_x4 = st.slider(food_user[4], 0,4)
+rat_x5 = st.slider(food_user[5], 0,4)
+rat_x6 = st.slider(food_user[6], 0,4)
+rat_x7 = st.slider(food_user[7], 0,4)
+rat_x8 = st.slider(food_user[8], 0,4)
+rat_x9 = st.slider(food_user[9], 0,4)
+rat_x10 = st.slider(food_user[10], 0,4)
+rat_x11 = st.slider(food_user[11], 0,4)
+rat_x12 = st.slider(food_user[12], 0,4)
+rat_x13 = st.slider(food_user[13], 0,4)
+rat_x14 = st.slider(food_user[14], 0,4)
+rat_x15 = st.slider(food_user[15], 0,4)
+rat_x16 = st.slider(food_user[16], 0,4)
+rat_x17 = st.slider(food_user[17], 0,4)
+rat_x18 = st.slider(food_user[18], 0,4)
+rat_x19 = st.slider(food_user[19], 0,4)
 
 rating_user = [rat_x0, rat_x1,rat_x2, rat_x3, rat_x4, rat_x5, rat_x6, rat_x7, rat_x8, 
               rat_x9, rat_x10, rat_x11, rat_x12, rat_x13, rat_x14, rat_x15, rat_x16,
@@ -198,63 +216,178 @@ n_items = data_encuesta.comida.unique().shape[0]
 
 
 def plan_semanal(dias_menu):
-# El plan semana constara de una comida por la mañana compuesta por un plato de 2 porciones de verduras, 
+# El plan semanal constara de una comida por la mañana compuesta por un plato de 2 porciones de verduras, 
 # 1 porcion de proteinas y 1 porción de carbohidratos
 # y como cena un plato combinado         
     
     menu_semanal = []
+    dias_almuerzo = []
+    almuerzos = []
+    link_almuerzos = []
+    dias_almuerzo_pdf = []
+    almuerzos_pdf = []
+    link_almuerzos_pdf = []
+    cenas = []
+    link_cenas = []
+    dias_cenas_pdf = []
     comidas_utilizadas = []
-    for dia in range(int(dias_menu)):
+    dias = []
+    cantidad = 0
+    while len(almuerzos)< int(dias_menu):
         comida_1 = []
-        mix_comida_1 = []        
+        mix_comida_1 = []
+        link_individual_almuerzo = []
         calorias_1 = 0
         cena = []
         for z in use_x:
-            if calorias_1 < calorias_comida:
-                if 'verduras' in mix_comida_1 and 'proteinas' in mix_comida_1 and 'carbohidratos' in mix_comida_1:
-                    menu_semanal.append(comida_1)
-                    break
-
+            cantidad += 1
+            if calorias_1 < calorias_comida:                
                 if (data['categoria'][z]=='Verduras'):
                     if 'verduras' in mix_comida_1 or data['Nombre'][z] in comidas_utilizadas:
-                        pass
+                        continue
                     else:
                         if calorias_1 + data['caloria porcion'][z] < calorias_comida:
-                            comida_1.append(data['Nombre'][z])
+                            comida_2 = []
+                            comida_2.append('2 Porciones ')
+                            comida_2.append(data['Nombre'][z])
+                            comida_3=''.join(comida_2)
+                            comida_1.append(comida_3) 
                             mix_comida_1.append('verduras')
                             calorias_1 += (2*data['caloria porcion'][z])
                             comidas_utilizadas.append(data['Nombre'][z])
+                            link_individual_almuerzo.append(data_total['link'][z])
+                                                       
 
                 if (data['categoria'][z]=='proteina'):
                     if 'proteinas' in mix_comida_1 or data['Nombre'][z] in comidas_utilizadas:
-                        pass
+                        continue
                     else:
                         if calorias_1+ data['caloria porcion'][z] < calorias_comida:
-                            comida_1.append(data['Nombre'][z])
+                            comida_2 = []
+                            comida_2.append('1 Porción ')
+                            comida_2.append(data['Nombre'][z])
+                            comida_3=''.join(comida_2)
+                            comida_1.append(comida_3)
                             mix_comida_1.append('proteinas')
                             calorias_1 += data['caloria porcion'][z]
                             comidas_utilizadas.append(data['Nombre'][z])
+                            link_individual_almuerzo.append(data_total['link'][z])
+                            
+                            
                 if (data['categoria'][z]=='carbohidratos'):
                     if 'carbohidratos' in mix_comida_1 or data['Nombre'][z] in comidas_utilizadas:
-                        pass
+                        continue
                     else:     
                         if calorias_1+ data['caloria porcion'][z] < calorias_comida:
-                            comida_1.append(data['Nombre'][z])
+                            comida_2 = []
+                            comida_2.append('1 Porción ')
+                            comida_2.append(data['Nombre'][z])
+                            comida_3=''.join(comida_2)
+                            comida_1.append(comida_3)
                             mix_comida_1.append('carbohidratos')
                             calorias_1 += data['caloria porcion'][z]
                             comidas_utilizadas.append(data['Nombre'][z])
+                            link_individual_almuerzo.append(data_total['link'][z])
+                            
+                            
+                if 'verduras' in mix_comida_1 and 'proteinas' in mix_comida_1 and 'carbohidratos' in mix_comida_1:
+                    comida_4='<br>'.join(comida_1)
+                    menu_semanal.append(comida_1)
+                    almuerzos.append(comida_4)
+                    comida_pdf="\n".join(comida_1)
+                    almuerzos_pdf.append(comida_pdf)
+                    link_pdf ="\n".join(link_individual_almuerzo)
+                    link_almuerzos_pdf.append(link_pdf)
+                    link_2 ='<br>'.join(link_individual_almuerzo)
+                    link_almuerzos.append(link_2)
+                    dias_pdf = []
+                    dias_pdf.append('Almuerzo Día ')
+                    dias_pdf.append(str(len(almuerzos)))
+                    dias_pdf2 = ''.join(dias_pdf)
+                    dias_almuerzo_pdf.append(dias_pdf2)
+                    dias.append(len(almuerzos))                    
+                    break
+
+                if 'verduras' in mix_comida_1 and calorias_1 > 0.8*calorias_comida:
+                    comida_4='<br>'.join(comida_1)
+                    menu_semanal.append(comida_1)
+                    almuerzos.append(comida_4)
+                    link_2 ='<br>'.join(link_individual_almuerzo)
+                    link_almuerzos.append(link_2)
+                    dias.append(len(almuerzos)) 
+                    comida_pdf="\n".join(comida_1)
+                    almuerzos_pdf.append(comida_pdf)
+                    link_pdf ="\n".join(link_individual_almuerzo)
+                    link_almuerzos_pdf.append(link_pdf)
+                    dias_pdf = []
+                    dias_pdf.append('Almuerzo Día ')
+                    dias_pdf.append(str(len(almuerzos)))
+                    dias_pdf2 = ''.join(dias_pdf)
+                    dias_almuerzo_pdf.append(dias_pdf2)
+                    break
+             
             else:
+                comida_4='<br>'.join(comida_1)
                 menu_semanal.append(comida_1)
-           
+                almuerzos.append(comida_4)                
+                link_2 ='<br>'.join(link_individual_almuerzo)
+                link_almuerzos.append(link_2)               
+                dias.append(len(almuerzos))
+                comida_pdf="\n".join(comida_1)
+                almuerzos_pdf.append(comida_pdf)
+                link_pdf ="\n".join(link_individual_almuerzo)
+                link_almuerzos_pdf.append(link_pdf)
+                dias_pdf = []
+                dias_pdf.append('Almuerzo Día ')
+                dias_pdf.append(str(len(almuerzos)))
+                dias_pdf2 = ''.join(dias_pdf)
+                dias_almuerzo_pdf.append(dias_pdf2)
+                break
+
+
+    while len(cena)< int(dias_menu):                
         for y in use_x:
-            if len(cena)== 0:
-                if (data['categoria'][y]=='Combinados'):
-                    if calorias_cena * 1.2 > data['caloria porcion'][y] > calorias_cena * 0.8:
-                        cena.append(data['Nombre'][y])
-                        menu_semanal.append(cena)
-                        comidas_utilizadas.append(data['Nombre'][y])
-            
-    return menu_semanal
+            if data['categoria'][y]=='Combinados' and data['Nombre'][y] not in comidas_utilizadas:
+                if calorias_cena * 1.2 > data['caloria porcion'][y] > calorias_cena * 0.8:
+                    cena.append(data['Nombre'][y])
+                    menu_semanal.append(cena)
+                    comidas_utilizadas.append(data['Nombre'][y])
+                    cenas.append(data['Nombre'][y])
+                    link_cenas.append(data_total['link'][y])
+                    dias_cena_pdf = []
+                    dias_cena_pdf.append('Cena Día ')
+                    dias_cena_pdf.append(str(len(cena)))
+                    dias_cena_pdf2 = ''.join(dias_cena_pdf)
+                    dias_cenas_pdf.append(dias_cena_pdf2)
+                    break     
+        
+    
+    df_almuerzos = pd.DataFrame({'Día':dias, 'Almuerzos':almuerzos, 'Recetas':link_almuerzos})
+    data_pdf = []
+    for a, b, c in zip(dias_almuerzo_pdf, almuerzos_pdf, link_almuerzos_pdf):
+        lista = [a,b,c]
+        data_pdf.append(lista)
+    
+    data_cena_pdf = []
+    for a, b, c in zip(dias_cenas_pdf, cenas, link_cenas):
+        lista = [a,b,c]
+        data_cena_pdf.append(lista)
+    
+    df_cenas = pd.DataFrame({'cenas':cenas, 'link cenas':link_cenas})    
+    fig = go.Figure(data=[go.Table(columnwidth=[80,400,400],header=dict(values=['Día','Almuerzo', 'Recetas']), cells=dict(values = [dias,almuerzos,link_almuerzos], align=['center', 'left', 'left']))])
+    fig.update_layout(margin_b = 0, margin_l= 0,width=1000, height=600)
+    fig_cena = go.Figure(data=[go.Table(columnwidth=[80,400,400],header=dict(values=['Día','Cena', 'Recetas']), cells=dict(values = [dias,cenas,link_cenas], align=['center', 'center', 'left']))])
+    fig_cena.update_layout(margin_t = 0, margin_l= 0, width=1000, height=400)
+    
+    return df_almuerzos, fig_cena, fig, data_pdf, data_cena_pdf
+
+
+
+
+def create_download_link(val, filename):
+    """ Generate a link to be download"""
+    b64 = base64.b64encode(val)
+    return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="{filename}.pdf">Descarga tu Menú </a>'
 
 
 
@@ -294,27 +427,62 @@ if st.button('Introducir los gustos'):
     itemItemCFpredictions[uMatrixTraining>=2.0] = 0.0
 
     recom = itemItemCFpredictions[[data_encuesta['user_id'].max()-1],:]
-    recom = np.argsort(recom)[0][0:100]
+    recom = np.argsort(recom)[0][0:200]
 
-    st.write(recom.shape)
+    
     
     comidas_recomendadas = [food_id[i] for i in recom]
-    st.write(comidas_recomendadas)
-    convert = [items_id_orig_id[i] for i in recom]
     
-
+    convert = [items_id_orig_id[i] for i in recom]
     use_x = convert
-    st.write(len(use_x)) 
-    st.write((use_x[0]))
+
     
     st.header('Requerimiento Calorico')
-    st.write(calculo_calorias(calculo_tmb(peso, altura, edad, sexo), actividad))
-    calorias_comida = 0.35 * calorias_diarias
-    calorias_cena = 0.25 * calorias_diarias
-    st.write('you need in your lunch:',calorias_comida, 'and in your dinner:',calorias_cena)
+    st.write(round(calculo_calorias(calculo_tmb(peso, altura, edad, sexo), actividad)))
+    calorias_comida = round(0.35 * calorias_diarias)
+    calorias_cena = round(0.28 * calorias_diarias)
+    st.write('Debes ingerir en la comida:',calorias_comida, 'calorias y en la cena:',calorias_cena, 'calorias')
     st.header('Menu Semanal')
-    st.write(plan_semanal(dias_menu))
+    df, fig_cena, fig, data_pdf, data_cena_pdf = plan_semanal(dias_menu)
 
+    st.write(fig)
+    st.write(fig_cena)
+
+
+    def export_as_pdf():    
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font('Times', '', 8)
+        
+        epw = pdf.w - 3*pdf.l_margin
+        col_width = epw/2
+        
+        data = data_pdf
+        th = pdf.font_size
+        
+        for row in data:
+            for datum in row:
+                if datum == row[0]:
+                    pdf.set_fill_color(135, 206, 235)
+                    pdf.multi_cell(col_width, 2*th, str(datum), border=1, align = 'C', fill = True)                      
+                else:
+                    pdf.multi_cell(col_width, 2*th, str(datum), border=1, align='C')
+            pdf.ln(2*th)
+        for row in data_cena_pdf:
+            for datum in row:
+                if datum == row[0]:
+                    pdf.set_fill_color(143, 237, 143)
+                    pdf.multi_cell(col_width, 2*th, str(datum), border=1, align = 'C', fill = True)                      
+                else: 
+                    pdf.multi_cell(col_width, 2*th, str(datum), border=1, align = 'C')   
+            pdf.ln(2*th)
+
+        html = create_download_link(pdf.output(dest='S').encode('Latin-1'),"test")
+
+        return st. markdown(html, unsafe_allow_html=True)  
+    
+    export_as_pdf()
+    
 
 
 

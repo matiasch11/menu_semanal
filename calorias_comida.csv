@@ -14,14 +14,14 @@ id_items;Nombre;caloria Porcion;categoria
 109;Ensalada de Atún con coliflor;206;Verduras
 120;Ensalada de berenjenas árabe;145;Verduras
 133;Ensalada con trigo americano y atún;540;Combinados
-138;Ensalada de Almendras y pollo;363;Verduras
+138;Ensalada de Almendras y pollo;363;Combinados
 140;Ensalada de trigo con verduras;203;Verduras
 144;Ensalada de remolacha y patatas;168;Verduras
-152;Empedrat de garbanzos;358;Verduras
+152;Empedrat de garbanzos;358;carbohidratos
 165;Ensalada de Pepino;102;Verduras
 167;Ensalada de lentejas y quinoa vegana;375;Combinados
 169;Judias verdes con patatas y huevos;200;Verduras
-173;Ensalada de pollo y aguacate;210;Verduras
+173;Ensalada de pollo y aguacate;210;Combinados
 174;Ensaladilla de remolacha;200;Verduras
 177;Ensalada de repollo y zanahoria;180;Verduras
 180;Ensalada de maíz y aguacate;260;Verduras
@@ -107,7 +107,7 @@ id_items;Nombre;caloria Porcion;categoria
 675;Patatas a la Riojana;350;Verduras
 682;Ragout de Ternera;420;proteina
 688;Alubias con Verduras;243;carbohidratos
-696;Potaje de lentejas;980;carbohidratos
+696;Potaje de lentejas;980;Combinados
 701;Lentejas con Verduras;168;carbohidratos
 703;Puchero casero;305;Verduras
 727;Secreto de cerdo al horno con queso;458;proteina
@@ -149,7 +149,7 @@ id_items;Nombre;caloria Porcion;categoria
 918;Pastel de Patata;300;Verduras
 920;Solomillo en salsa roquefort;340;proteina
 924;Calabaza al horno;60;Verduras
-930;Calamares a la andaluza;200;Verduras
+930;Calamares a la andaluza;200;proteina
 938;Quinoa con verduras;396;Combinados
 941;Quinoa con queso;525;carbohidratos
 958;Hamburguesa de Quinoa;125;carbohidratos
@@ -165,7 +165,7 @@ id_items;Nombre;caloria Porcion;categoria
 1099;Sushi sin alga nori;548;Combinados
 1101;Tofu con salsa picante;250;proteina
 1102;Fajitas de pollo y carne picada;300;Combinados
-1103;Tostada de jamón serrano y tomate;150;Verduras
+1103;Tostada de jamón serrano y tomate;150;carbohidratos
 1104;Tostada con champiñones y queso;204;Verduras
 1105;Espinacas con garbanzos en thermomix;250;Verduras
 1106;Puré de patata con zanahoria;130;Verduras
@@ -211,22 +211,22 @@ id_items;Nombre;caloria Porcion;categoria
 1247;Tortilla de berenjena;277;Verduras
 1256;Puré de calabaza;102;Verduras
 1267;Crepes salados;110;Verduras
-1268;Sándwich de pernil;385;Verduras
-1269;Sándwich de queso y tocino;250;Verduras
-1281;Sopa de legumbres casera;49;Verduras
-1282;Ensalada agridulce de garbanzos;250;Verduras
-1286;Menestra de fréjol;300;Verduras
-1306;Hamburguesas de lentejas;200;Verduras
-1309;Quinoa con champiñones;400;Verduras
-1316;Albóndigas de lentejas;89;Verduras
-1317;Ensalada de alubias blancas;155;Verduras
+1268;Sándwich de pernil;385;Combinados
+1269;Sándwich de queso y tocino;250;carbohidratos
+1281;Sopa de legumbres casera;49;carbohidratos
+1282;Ensalada agridulce de garbanzos;250;carbohidratos
+1286;Menestra de fréjol;300;carbohidratos
+1306;Hamburguesas de lentejas;200;carbohidratos
+1309;Quinoa con champiñones;400;Combinados
+1316;Albóndigas de lentejas;89;carbohidratos
+1317;Ensalada de alubias blancas;155;carbohidratos
 1360;Salmón al horno con verduras;500;Combinados
 1420;Merluza con espárragos al horno;340;Combinados
 1553;Salmón en salsa de queso;655;proteina
 1580;Merluza en salsa de champiñones;250;proteina
 1592;Merluza rebozada;390;proteina
 1594;Mero a la parrilla;145;proteina
-1623;Dorada a la plancha;110;Verduras
+1623;Dorada a la plancha;110;proteina
 1652;Salmón a la plancha;499;proteina
 1710;Pizza pepperoni;300;carbohidratos
 1712;Fusilli con atún y verduras;328;carbohidratos
